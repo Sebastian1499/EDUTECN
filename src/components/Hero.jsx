@@ -31,7 +31,13 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden lg:block">
-          <div className="relative overflow-hidden rounded-3xl">
+          <div
+            className="relative overflow-hidden rounded-3xl"
+            style={{
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 96%)',
+              maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 96%)',
+            }}
+          >
             <img
               src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
               alt="Estudiantes de EDUTECN aprendiendo juntos"
