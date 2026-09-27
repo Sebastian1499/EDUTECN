@@ -18,8 +18,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
         <NavLink to="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-white text-lg font-extrabold text-rose-600">
-            T
+          <span className="relative flex h-10 w-10 shrink-0 items-center justify-center">
+            <span className="absolute inset-0 rotate-45 rounded-lg bg-gradient-to-br from-primary via-fuchsia-500 to-teal" />
+            <span className="absolute inset-[3px] rotate-45 rounded-md bg-white" />
+            <span className="relative text-lg font-extrabold text-secondary">T</span>
           </span>
           <span className="leading-tight">
             <span className="block text-lg font-extrabold tracking-tight">
