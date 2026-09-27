@@ -21,12 +21,11 @@ export default function Navbar() {
           <span className="relative flex h-10 w-10 shrink-0 items-center justify-center">
             <span className="absolute inset-0 rotate-45 rounded-lg bg-gradient-to-br from-primary via-fuchsia-500 to-teal" />
             <span className="absolute inset-[3px] rotate-45 rounded-md bg-white" />
-            <span className="relative text-lg font-extrabold text-secondary">T</span>
+            <span className="relative text-lg font-extrabold text-rose-600">T</span>
           </span>
           <span className="leading-tight">
-            <span className="block text-lg font-extrabold tracking-tight">
-              <span className="text-secondary">EDU</span>
-              <span className="text-rose-600">TECN</span>
+            <span className="block text-lg font-extrabold tracking-tight text-secondary">
+              EDUTECN
             </span>
             <span className="hidden text-[11px] leading-snug text-secondary/60 sm:block">
               {taglineLine1} que

@@ -37,8 +37,7 @@ export default function Hero() {
               alt="Estudiantes de EDUTECN aprendiendo juntos"
               className="aspect-[4/3] w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-primary/10 to-transparent mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-transparent to-teal/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-primary/45 to-teal/50 mix-blend-multiply" />
           </div>
           <span className="font-hand absolute -top-6 right-2 rotate-3 text-3xl text-white/90">
             Aprende Crece Avanza
