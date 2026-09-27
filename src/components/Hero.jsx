@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto hidden w-full max-w-md lg:block">
+        <div className="relative mx-auto mt-10 w-full max-w-md lg:mt-0">
           <div
             className="relative aspect-[16/11] overflow-hidden rounded-3xl"
             style={{
