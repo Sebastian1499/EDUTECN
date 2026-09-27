@@ -82,36 +82,42 @@ export const programs = [
     description: 'Cuida, acompaña y haz la diferencia en la vida de los demás.',
     icon: 'salud',
     color: 'bg-blue-100 text-blue-600',
+    image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&q=80&auto=format&fit=crop',
   },
   {
     title: 'Técnico en Electricidad Industrial',
     description: 'Aprende, practica y desarrolla tu talento técnico.',
     icon: 'electricidad',
     color: 'bg-amber-100 text-amber-600',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80&auto=format&fit=crop',
   },
   {
     title: 'Técnico en Sistemas',
     description: 'Conviértete en el profesional que el mundo digital necesita.',
     icon: 'sistemas',
     color: 'bg-purple-100 text-purple-600',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80&auto=format&fit=crop',
   },
   {
     title: 'Técnico en Auxiliar Contable y Financiero',
     description: 'Domina las herramientas contables que exigen las empresas hoy.',
     icon: 'pagos',
     color: 'bg-green-100 text-green-600',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80&auto=format&fit=crop',
   },
   {
     title: 'Técnico en Auxiliar Administrativo',
     description: 'Fortalece tus habilidades de gestión y organización empresarial.',
     icon: 'practicas',
     color: 'bg-rose-100 text-rose-600',
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600&q=80&auto=format&fit=crop',
   },
   {
     title: 'Técnico en Talento Humano',
     description: 'Aprende a gestionar el activo más importante de toda organización.',
     icon: 'docentes',
     color: 'bg-cyan-100 text-cyan-600',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop',
   },
 ];
 

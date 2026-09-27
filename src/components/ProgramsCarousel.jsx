@@ -43,11 +43,17 @@ export default function ProgramsCarousel() {
               key={program.title}
               className="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-secondary/10 via-primary/10 to-teal/10">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
                 <span
-                  className={`absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-xl ${program.color}`}
+                  className={`absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-xl shadow-md ${program.color}`}
                 >
-                  <Icon name={program.icon} className="h-5 w-5" />
+                  <Icon name={program.icon} className="h-6 w-6" />
                 </span>
               </div>
               <div className="p-6">

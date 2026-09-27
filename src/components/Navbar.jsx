@@ -15,8 +15,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
         <NavLink to="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-lg font-bold text-white">
-            T
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-white">
+            <Icon name="globe" className="h-6 w-6" />
           </span>
           <span className="leading-tight">
             <span className="block text-lg font-extrabold tracking-tight text-secondary">

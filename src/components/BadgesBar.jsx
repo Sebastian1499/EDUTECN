@@ -8,7 +8,9 @@ export default function BadgesBar() {
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {badges.map((badge) => (
             <div key={badge.label} className="flex flex-col items-center gap-2 text-center">
-              <Icon name={badge.icon} className="h-6 w-6" />
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15">
+                <Icon name={badge.icon} className="h-6 w-6" />
+              </span>
               <p className="text-xs font-medium sm:text-sm">{badge.label}</p>
             </div>
           ))}

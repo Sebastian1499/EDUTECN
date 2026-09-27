@@ -31,7 +31,11 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden lg:block">
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white/10 backdrop-blur-sm" />
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
+            alt="Estudiantes de EDUTECN aprendiendo juntos"
+            className="aspect-[4/3] w-full rounded-3xl object-cover shadow-2xl"
+          />
           <span className="font-hand absolute -top-6 right-2 rotate-3 text-3xl text-white/90">
             Aprende Crece Avanza
           </span>
