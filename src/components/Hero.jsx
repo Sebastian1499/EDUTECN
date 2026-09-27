@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-primary to-teal text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-16 lg:grid-cols-2 lg:pb-24 lg:pt-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-10 pt-16 lg:grid-cols-2 lg:pb-14 lg:pt-20">
         <div>
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium">
             Tu futuro, nuestra misión
