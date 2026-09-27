@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { navLinks, site } from '../data/siteData';
 import Icon from './Icon';
+import logo from '../assets/EDUTECN_LOGOB.jpg';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [taglineLine1, taglineLine2] = site.tagline.split(' que ');
 
   const linkClasses = ({ isActive }) =>
     `flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
@@ -17,22 +17,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
-        <NavLink to="/" className="flex items-center gap-2.5">
-          <span className="relative flex h-10 w-10 shrink-0 items-center justify-center">
-            <span className="absolute inset-0 rotate-45 rounded-lg bg-gradient-to-br from-primary via-fuchsia-500 to-teal" />
-            <span className="absolute inset-[3px] rotate-45 rounded-md bg-white" />
-            <span className="relative text-lg font-extrabold text-rose-600">T</span>
-          </span>
-          <span className="leading-tight">
-            <span className="block text-lg font-extrabold tracking-tight text-secondary">
-              EDUTECN
-            </span>
-            <span className="hidden text-[11px] leading-snug text-secondary/60 sm:block">
-              {taglineLine1} que
-              <br />
-              {taglineLine2}
-            </span>
-          </span>
+        <NavLink to="/" className="flex items-center">
+          <img src={logo} alt={site.name} className="h-12 w-auto" />
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex">
