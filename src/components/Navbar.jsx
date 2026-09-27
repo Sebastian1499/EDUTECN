@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt={site.name} className="h-12 w-auto" />
+          <img src={logo} alt={site.name} className="h-20 w-auto" />
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex">
