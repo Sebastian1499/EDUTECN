@@ -34,8 +34,8 @@ export default function Hero() {
           <div
             className="relative overflow-hidden rounded-3xl"
             style={{
-              WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 96%)',
-              maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 96%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 80%, transparent 100%)',
+              maskImage: 'radial-gradient(ellipse at center, black 80%, transparent 100%)',
             }}
           >
             <img
@@ -43,7 +43,14 @@ export default function Hero() {
               alt="Estudiantes de EDUTECN aprendiendo juntos"
               className="aspect-[4/3] w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-primary/45 to-teal/50 mix-blend-multiply" />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'radial-gradient(ellipse at center, transparent 42%, rgba(16,22,58,0.7) 100%)',
+                mixBlendMode: 'multiply',
+              }}
+            />
           </div>
           <span className="font-hand absolute -top-6 right-2 rotate-3 text-3xl text-white/90">
             Aprende Crece Avanza
