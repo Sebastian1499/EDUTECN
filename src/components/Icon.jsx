@@ -25,6 +25,7 @@ const paths = {
   search: 'M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z',
   'chevron-left': 'M15.75 19.5L8.25 12l7.5-7.5',
   'chevron-right': 'M8.25 4.5l7.5 7.5-7.5 7.5',
+  'chevron-down': 'M4.5 8.25l7.5 7.5 7.5-7.5',
 };
 
 export default function Icon({ name, className = 'w-6 h-6' }) {
