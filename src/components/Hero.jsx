@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-primary to-teal text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:py-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-24 pt-16 lg:grid-cols-2 lg:pb-28 lg:pt-20">
         <div>
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium">
             Tu futuro, nuestra misión
@@ -31,11 +31,15 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden lg:block">
-          <img
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
-            alt="Estudiantes de EDUTECN aprendiendo juntos"
-            className="aspect-[4/3] w-full rounded-3xl object-cover shadow-2xl"
-          />
+          <div className="relative overflow-hidden rounded-3xl">
+            <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
+              alt="Estudiantes de EDUTECN aprendiendo juntos"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-primary/10 to-transparent mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-transparent to-teal/20" />
+          </div>
           <span className="font-hand absolute -top-6 right-2 rotate-3 text-3xl text-white/90">
             Aprende Crece Avanza
           </span>
