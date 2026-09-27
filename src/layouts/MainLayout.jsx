@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 export default function MainLayout() {
   return (
-    <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+    <div className="relative flex min-h-screen flex-col">
       {/* Ambient background blobs: page-anchored (absolute, not fixed) so they scroll with content and cover the whole document, not just one viewport */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-20 -left-32 h-[32rem] w-[32rem] rounded-full bg-primary/35 blur-3xl" />
