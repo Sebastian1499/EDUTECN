@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const heroImages = [
+  'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=900&q=80&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80&auto=format&fit=crop',
+];
+
 export default function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-primary to-teal text-white">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-16 lg:grid-cols-2 lg:pb-24 lg:pt-20">
@@ -32,17 +48,22 @@ export default function Hero() {
 
         <div className="relative mx-auto hidden w-full max-w-md lg:block">
           <div
-            className="relative overflow-hidden rounded-3xl"
+            className="relative aspect-[16/11] overflow-hidden rounded-3xl"
             style={{
               WebkitMaskImage: 'radial-gradient(ellipse at center, black 80%, transparent 100%)',
               maskImage: 'radial-gradient(ellipse at center, black 80%, transparent 100%)',
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
-              alt="Estudiantes de EDUTECN aprendiendo juntos"
-              className="aspect-[16/11] w-full object-cover"
-            />
+            {heroImages.map((src, index) => (
+              <img
+                key={src}
+                src={src}
+                alt="Estudiantes de EDUTECN aprendiendo juntos"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                  index === activeSlide ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
             <div
               className="absolute inset-0"
               style={{
@@ -57,10 +78,17 @@ export default function Hero() {
             Aprende Crece Avanza
           </span>
           <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-            <span className="h-2 w-6 rounded-full bg-white" />
-            <span className="h-2 w-2 rounded-full bg-white/50" />
-            <span className="h-2 w-2 rounded-full bg-white/50" />
-            <span className="h-2 w-2 rounded-full bg-white/50" />
+            {heroImages.map((src, index) => (
+              <button
+                key={src}
+                type="button"
+                aria-label={`Ver imagen ${index + 1}`}
+                onClick={() => setActiveSlide(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === activeSlide ? 'w-6 bg-white' : 'w-2 bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
