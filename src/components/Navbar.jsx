@@ -5,6 +5,7 @@ import Icon from './Icon';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [taglineLine1, taglineLine2] = site.tagline.split(' que ');
 
   const linkClasses = ({ isActive }) =>
     `flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
@@ -17,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
         <NavLink to="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-lg font-extrabold text-rose-500">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-white text-lg font-extrabold text-rose-600">
             T
           </span>
           <span className="leading-tight">
@@ -25,8 +26,10 @@ export default function Navbar() {
               <span className="text-secondary">EDU</span>
               <span className="text-rose-600">TECN</span>
             </span>
-            <span className="hidden max-w-[170px] text-[11px] leading-snug text-secondary/60 sm:block">
-              {site.tagline}
+            <span className="hidden text-[11px] leading-snug text-secondary/60 sm:block">
+              {taglineLine1} que
+              <br />
+              {taglineLine2}
             </span>
           </span>
         </NavLink>
