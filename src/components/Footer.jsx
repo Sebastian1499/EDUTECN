@@ -7,9 +7,11 @@ export default function Footer() {
     <footer className="bg-secondary text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="mb-3 flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-lg font-bold text-white">
-              T
+          <div className="mb-3 flex items-center gap-2.5">
+            <span className="relative flex h-12 w-12 shrink-0 items-center justify-center">
+              <span className="absolute inset-0 rotate-45 rounded-lg bg-gradient-to-br from-primary via-fuchsia-500 to-teal" />
+              <span className="absolute inset-[3px] rotate-45 rounded-md bg-secondary" />
+              <span className="relative text-xl font-extrabold text-rose-500">T</span>
             </span>
             <span className="text-lg font-bold">{site.name}</span>
           </div>
