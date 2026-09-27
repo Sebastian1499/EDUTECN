@@ -3,7 +3,7 @@ import Icon from './Icon';
 
 export default function StatsBar() {
   return (
-    <section className="relative z-10 mx-auto -mt-8 max-w-6xl px-6 sm:-mt-14">
+    <section className="relative z-10 mx-auto max-w-6xl px-6 pt-10">
       <div className="grid grid-cols-2 gap-6 rounded-2xl bg-page/90 p-6 shadow-sm backdrop-blur-sm sm:grid-cols-4">
         {stats.map((item) => (
           <div key={item.label} className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left">
