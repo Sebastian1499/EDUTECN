@@ -8,10 +8,10 @@ export default function Contacto() {
     <>
       <Seo
         title="Contacto"
-        description="Comunícate con el Colegio Ateniense. Estamos para ayudarte."
+        description="Comunícate con EDUTECN. Estamos para ayudarte."
       />
 
-      <section className="bg-secondary py-16 text-center text-white">
+      <section className="bg-gradient-to-br from-secondary via-primary to-teal py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="text-3xl font-bold sm:text-4xl">Contáctanos</h1>
           <p className="mt-4 text-white/80">Resolvemos tus dudas y te acompañamos en el proceso.</p>

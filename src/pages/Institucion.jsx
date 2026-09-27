@@ -12,14 +12,15 @@ export default function Institucion() {
     <>
       <Seo
         title="Institución"
-        description="Conoce la historia, misión, visión y valores del Colegio Ateniense."
+        description="Conoce la historia, misión, visión y valores de EDUTECN."
       />
 
-      <section className="bg-secondary py-16 text-center text-white">
+      <section className="bg-gradient-to-br from-secondary via-primary to-teal py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-6">
           <h1 className="text-3xl font-bold sm:text-4xl">Nuestra Institución</h1>
-          <p className="mt-4 text-white/80">
-            Más de 30 años formando estudiantes íntegros, críticos y preparados para el futuro.
+          <p className="mt-4 text-white/85">
+            Educación técnica que enciende sueños e ilumina vidas, formando profesionales listos
+            para el mundo laboral.
           </p>
         </div>
       </section>
@@ -28,9 +29,8 @@ export default function Institucion() {
         <div className="rounded-2xl border border-gray-100 p-8 shadow-sm">
           <h2 className="text-xl font-semibold text-secondary">Misión</h2>
           <p className="mt-3 text-sm text-secondary/70">
-            Formar integralmente a nuestros estudiantes bajo principios de excelencia académica,
-            valores éticos y sentido de responsabilidad social, preparándolos para afrontar los
-            retos del mundo actual.
+            Formar técnicos laborales competentes, con valores éticos y enfoque práctico,
+            preparándolos para responder a las necesidades del mundo laboral actual.
           </p>
         </div>
         <div className="rounded-2xl border border-gray-100 p-8 shadow-sm">

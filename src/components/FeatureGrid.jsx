@@ -10,10 +10,11 @@ export default function FeatureGrid() {
           Encuentra lo que necesitas
         </span>
         <h2 className="mt-2 text-3xl font-bold text-secondary sm:text-4xl">
-          Todo lo que necesitas en un solo lugar
+          Todo lo que necesitas para avanzar
         </h2>
         <p className="mt-3 text-secondary/70">
-          Accesos rápidos a los servicios académicos y administrativos del colegio.
+          Formación técnica, práctica y con enfoque en el mundo laboral. Descubre nuestros
+          programas y elige el que se ajusta a tus metas.
         </p>
       </div>
 
@@ -21,11 +22,14 @@ export default function FeatureGrid() {
         {features.map((item) => {
           const cardContent = (
             <>
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <span className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.color}`}>
                 <Icon name={item.icon} className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-lg font-semibold text-secondary">{item.title}</h3>
               <p className="mt-1.5 text-sm text-secondary/70">{item.description}</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                Ver más <Icon name="arrow-right" className="h-3.5 w-3.5" />
+              </span>
             </>
           );
 

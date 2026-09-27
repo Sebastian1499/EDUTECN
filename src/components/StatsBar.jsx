@@ -1,13 +1,19 @@
 import { stats } from '../data/siteData';
+import Icon from './Icon';
 
 export default function StatsBar() {
   return (
     <section className="mx-auto -mt-10 max-w-6xl px-6">
       <div className="grid grid-cols-2 gap-6 rounded-2xl bg-white p-8 shadow-xl ring-1 ring-black/5 sm:grid-cols-4">
         {stats.map((item) => (
-          <div key={item.label} className="text-center">
-            <p className="text-2xl font-extrabold text-primary sm:text-3xl">{item.value}</p>
-            <p className="mt-1 text-xs text-secondary/70 sm:text-sm">{item.label}</p>
+          <div key={item.label} className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left">
+            <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${item.color}`}>
+              <Icon name={item.icon} className="h-5 w-5" />
+            </span>
+            <div className="mt-2 sm:ml-3 sm:mt-0">
+              <p className="text-xl font-extrabold text-secondary">{item.value}</p>
+              <p className="text-xs text-secondary/60">{item.label}</p>
+            </div>
           </div>
         ))}
       </div>

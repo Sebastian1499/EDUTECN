@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { navLinks, quickAccess, site } from '../data/siteData';
+import { navLinks, site } from '../data/siteData';
 import Icon from './Icon';
 
 export default function Navbar() {
@@ -13,34 +13,22 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      {/* Barra de accesos rápidos a plataformas externas */}
-      <div className="hidden md:block bg-secondary text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-end gap-5 px-6 py-1.5 text-xs">
-          {quickAccess.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 opacity-90 transition-opacity hover:opacity-100"
-            >
-              <Icon name={item.icon} className="h-3.5 w-3.5" />
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Navegación principal */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <NavLink to="/" className="flex items-center gap-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">
-            CA
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
+        <NavLink to="/" className="flex items-center gap-2.5">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-lg font-bold text-white">
+            T
           </span>
-          <span className="text-lg font-bold text-secondary">{site.name}</span>
+          <span className="leading-tight">
+            <span className="block text-lg font-extrabold tracking-tight text-secondary">
+              {site.name}
+            </span>
+            <span className="hidden text-[11px] text-secondary/60 sm:block">
+              {site.tagline}
+            </span>
+          </span>
         </NavLink>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
             <NavLink key={link.to} to={link.to} className={linkClasses} end={link.to === '/'}>
               {link.label}
@@ -48,18 +36,22 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-4 lg:flex">
+          <button type="button" aria-label="Buscar" className="text-secondary/70 hover:text-primary">
+            <Icon name="search" className="h-5 w-5" />
+          </button>
           <NavLink
-            to="/admisiones"
-            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+            to="/inscripciones"
+            className="flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
           >
             Inscríbete
+            <Icon name="arrow-right" className="h-4 w-4" />
           </NavLink>
         </div>
 
         <button
           type="button"
-          className="text-secondary md:hidden"
+          className="text-secondary lg:hidden"
           aria-label="Abrir menú"
           onClick={() => setOpen((v) => !v)}
         >
@@ -67,9 +59,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menú móvil */}
       {open && (
-        <div className="border-t border-gray-100 bg-white px-6 pb-4 md:hidden">
+        <div className="border-t border-gray-100 bg-white px-6 pb-4 lg:hidden">
           <nav className="flex flex-col gap-3 pt-3">
             {navLinks.map((link) => (
               <NavLink
@@ -83,27 +74,13 @@ export default function Navbar() {
               </NavLink>
             ))}
             <NavLink
-              to="/admisiones"
+              to="/inscripciones"
               onClick={() => setOpen(false)}
-              className="mt-2 w-fit rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white"
+              className="mt-2 w-fit rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white"
             >
               Inscríbete
             </NavLink>
           </nav>
-          <div className="mt-4 flex flex-col gap-3 border-t border-gray-100 pt-4">
-            {quickAccess.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-secondary/80"
-              >
-                <Icon name={item.icon} className="h-4 w-4" />
-                {item.label}
-              </a>
-            ))}
-          </div>
         </div>
       )}
     </header>

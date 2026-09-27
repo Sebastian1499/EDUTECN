@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="mb-3 flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">
-              CA
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-lg font-bold text-white">
+              T
             </span>
             <span className="text-lg font-bold">{site.name}</span>
           </div>
@@ -28,6 +28,11 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/contacto" className="text-white/80 hover:text-white">
+                Contacto
+              </Link>
+            </li>
           </ul>
         </div>
 
