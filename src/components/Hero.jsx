@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-primary to-teal text-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-24 pt-16 lg:grid-cols-2 lg:pb-28 lg:pt-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-16 lg:grid-cols-2 lg:pb-24 lg:pt-20">
         <div>
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium">
             Tu futuro, nuestra misión
@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative hidden lg:block">
+        <div className="relative mx-auto hidden w-full max-w-md lg:block">
           <div
             className="relative overflow-hidden rounded-3xl"
             style={{
@@ -41,7 +41,7 @@ export default function Hero() {
             <img
               src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80&auto=format&fit=crop"
               alt="Estudiantes de EDUTECN aprendiendo juntos"
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-[16/11] w-full object-cover"
             />
             <div
               className="absolute inset-0"
@@ -64,6 +64,15 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <svg
+        className="absolute inset-x-0 bottom-0 h-14 w-full text-white sm:h-20"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path fill="currentColor" d="M0,40 C240,90 480,90 720,55 C960,20 1200,20 1440,50 L1440,100 L0,100 Z" />
+      </svg>
     </section>
   );
 }
