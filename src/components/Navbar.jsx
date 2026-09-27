@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { navLinks, site } from '../data/siteData';
 import Icon from './Icon';
-import logo from '../assets/EDUTECN_LOGOB.jpg';
+import logo from '../assets/EDU.jpeg';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt={site.name} className="h-32 w-auto py-1" />
+          <img src={logo} alt={site.name} className="h-14 w-auto" />
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex">
