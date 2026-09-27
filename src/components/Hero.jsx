@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       <svg
-        className="absolute inset-x-0 bottom-0 h-14 w-full text-white sm:h-20"
+        className="absolute inset-x-0 bottom-0 h-14 w-full text-page sm:h-20"
         viewBox="0 0 1440 100"
         preserveAspectRatio="none"
         aria-hidden="true"

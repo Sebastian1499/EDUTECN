@@ -34,7 +34,7 @@ export default function FeatureGrid() {
           );
 
           const cardClasses =
-            'group rounded-2xl border border-gray-100 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg';
+            'group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg';
 
           return item.to ? (
             <Link key={item.title} to={item.to} className={cardClasses}>

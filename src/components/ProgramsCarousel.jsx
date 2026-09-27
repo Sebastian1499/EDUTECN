@@ -4,7 +4,7 @@ import Icon from './Icon';
 
 export default function ProgramsCarousel() {
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
